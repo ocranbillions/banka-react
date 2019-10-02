@@ -7,7 +7,8 @@
 }
 
 .header {
-  background: #529EE4;
+  // background: #529EE4;
+  background: #343477;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
@@ -40,11 +41,17 @@
       margin-bottom: 20px;
       align-items: flex-start;
 
-      .content__open-account {
-        font-weight: bold;
-        padding: .5rem;
+      #btn__open-account {
         border-radius: .5rem;
-        border: 1px solid #529EE4;
+        padding: 10px;
+        border: 0px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      #btn__open-account:focus,
+      #btn__open-account:active {
+        border: 1px solid #565695;
       }
 
       .content__profile {
@@ -55,7 +62,7 @@
           border-radius: 50%;
           height: 65px;
           width: 65px;
-          border: 1px solid #529EE4;
+          border: 1px solid #565695;
           margin-right: 5px;
         }
         .profile__info p {
@@ -75,11 +82,12 @@
       display: flex;
       
       .account {
-        background: #EBE3E3;
+        background: #F3F3F3;
         height: 10rem;
         width: 20rem;
         padding: .5rem;
         border-radius: .5rem;
+        border: 1px solid #565695;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: .5rem;
 
@@ -99,9 +107,12 @@
 
 
 .footer {
-  background: #529EE4;
+  background: #343477;
+  color: white;
   height: 45px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

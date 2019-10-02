@@ -24,6 +24,9 @@ h5 {
   margin: 6px;
   padding: 0; }
 
+.mt2 {
+  margin-top: 2rem; }
+
 .main-container {
   display: flex;
   height: 100%; }
@@ -52,7 +55,7 @@ h5 {
         margin-top: auto; }
   .main-container .main-container__right {
     width: 30%;
-    background: #529EE4;
+    background: #565695;
     color: white;
     padding-right: 1rem;
     padding-left: 1rem; }
@@ -109,16 +112,15 @@ h5 {
 
 .logo {
   font-size: 3.8rem;
-  color: black;
-  text-decoration: none; }
-
-.logo--blue {
-  color: #529EE4;
+  color: #565695;
+  text-decoration: none;
   font-style: italic; }
+
+.logo--green {
+  color: greenyellow; }
 
 .logo--white {
-  color: white;
-  font-style: italic; }
+  color: white; }
 
 .main-container__right form {
   display: flex;
@@ -151,7 +153,7 @@ h5 {
   height: 100%; }
 
 .header {
-  background: #529EE4;
+  background: #343477;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
@@ -176,11 +178,15 @@ h5 {
       margin-top: 10px;
       margin-bottom: 20px;
       align-items: flex-start; }
-      .main .content__header .content__open-account {
-        font-weight: bold;
-        padding: .5rem;
+      .main .content__header #btn__open-account {
         border-radius: .5rem;
-        border: 1px solid #529EE4; }
+        padding: 10px;
+        border: 0px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+      .main .content__header #btn__open-account:focus,
+      .main .content__header #btn__open-account:active {
+        border: 1px solid #565695; }
       .main .content__header .content__profile {
         display: flex;
         align-items: center; }
@@ -188,7 +194,7 @@ h5 {
           border-radius: 50%;
           height: 65px;
           width: 65px;
-          border: 1px solid #529EE4;
+          border: 1px solid #565695;
           margin-right: 5px; }
         .main .content__header .content__profile .profile__info p {
           margin: 0;
@@ -200,11 +206,12 @@ h5 {
     .main .content__accounts {
       display: flex; }
       .main .content__accounts .account {
-        background: #EBE3E3;
+        background: #F3F3F3;
         height: 10rem;
         width: 20rem;
         padding: .5rem;
         border-radius: .5rem;
+        border: 1px solid #565695;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: .5rem; }
         .main .content__accounts .account p {
@@ -215,9 +222,12 @@ h5 {
           justify-content: flex-end; }
 
 .footer {
-  background: #529EE4;
+  background: #343477;
+  color: white;
   height: 45px;
-  text-align: center; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /* ================================= 
   Media Queries
@@ -246,16 +256,19 @@ h5 {
       font-size: 1.2rem; } }
 
 .side-nav {
-  background: #EBE3E3;
+  background: #565695;
   display: flex;
   flex-direction: column;
   width: 15%; }
   .side-nav__link {
     text-decoration: none;
     display: block;
-    margin-top: 80px; }
+    margin-top: 80px;
+    color: white; }
   .side-nav__link:hover {
-    background: #F3F3F3; }
+    background: #F3F3F3;
+    color: greenyellow;
+    font-weight: bold; }
   .side-nav__link-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -276,4 +289,20 @@ h5 {
     .side-nav__icon {
       height: 25px;
       width: 25px; } }
+
+.content__transactions .transaction {
+  background: #F3F3F3;
+  height: 10rem;
+  padding: .5rem;
+  margin-top: 1.5rem;
+  border: 1px solid #565695;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media only screen and (max-width: 600px) {
+  .content__select-account {
+    margin-top: 2rem; } }
 

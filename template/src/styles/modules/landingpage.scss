@@ -37,7 +37,8 @@
   }
   .main-container__right {
     width: 30%;
-    background: #529EE4;
+    // background: #529EE4;
+    background: #565695;
     color: white;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -93,6 +94,8 @@
 
     &__join-now {
       background: #0D6FC7;
+      // background: #343477;
+
       color: white;
       padding: 1rem;
       display: block;
@@ -123,16 +126,15 @@
 
 .logo {
   font-size: 3.8rem;
-  color: black;
+  color: #565695;
   text-decoration: none;
-}
-.logo--blue {
-  color: #529EE4;
   font-style: italic;
+}
+.logo--green {
+  color: greenyellow;
 }
 .logo--white {
   color: white;
-  font-style: italic;
 }
 
 // Login/Register
