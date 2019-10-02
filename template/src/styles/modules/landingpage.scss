@@ -36,8 +36,8 @@
     }
   }
   .main-container__right {
-    background: #529EE4;
     width: 30%;
+    background: #529EE4;
     color: white;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -81,7 +81,6 @@
     }
 
     &__heading {
-      // font-size: 3.3rem;
       text-align: center;
       margin-top: 10rem;
       font-weight: normal;
@@ -160,7 +159,6 @@
      background: #0D6FC7;
      border: none;
      color: white;
-    //  transition: box-shadow .2s;
     }
 
     & input[type="submit"]:hover {

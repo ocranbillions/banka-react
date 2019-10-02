@@ -1,0 +1,152 @@
+.page-container {
+  max-width: 144rem;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  background: #529EE4;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+
+  .logout {
+    align-self: flex-end;
+    margin-bottom: .5rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+.main {
+  display: flex;
+  flex: 1;
+
+
+  // Content section;
+  .content {
+    width: 85%;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #F3F3F3;
+
+    // Content header section
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+
+      .content__open-account {
+        font-weight: bold;
+        padding: .5rem;
+        border-radius: .5rem;
+        border: 1px solid #529EE4;
+      }
+
+      .content__profile {
+        display: flex;
+        align-items: center;
+
+        & img {
+          border-radius: 50%;
+          height: 65px;
+          width: 65px;
+          border: 1px solid #529EE4;
+          margin-right: 5px;
+        }
+        .profile__info p {
+          margin: 0;
+          font-size: 12px;
+        }
+
+        .profile__info .name {
+          font-weight: bold;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__accounts {
+      display: flex;
+      
+      .account {
+        background: #EBE3E3;
+        height: 10rem;
+        width: 20rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: .5rem;
+
+        & p {
+          margin: 0;
+        }
+
+        & p:nth-child(1) {
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  background: #529EE4;
+  height: 45px;
+  text-align: center;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media only screen and (max-width: 600px) {
+  .main {
+    .content {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: .5rem;
+      height: 100%;
+      padding-bottom: 5rem;
+
+      &__header,
+      #profile p {
+        font-size: 11px;
+      }
+      
+      &__profile {
+        order: -1;
+      }
+
+      &__open-account {
+        margin-top: 2rem;
+      }
+
+      &__header,
+      &__accounts {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #profile img {
+        height: 45px;
+        width: 45px;
+      }
+
+      &__accounts {
+        font-size: 1.2rem;
+      }
+    }  
+  }
+}
+
+// 1025px 769px
