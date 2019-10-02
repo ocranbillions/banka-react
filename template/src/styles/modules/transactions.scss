@@ -1,0 +1,25 @@
+.content__transactions {
+  // border: 1px solid black;
+
+  .transaction {
+    background: #F3F3F3;
+    height: 10rem;
+    padding: .5rem;
+    margin-top: 1.5rem;
+    border: 1px solid #565695;
+    border-radius: .5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media only screen and (max-width: 600px) {
+  .content {
+    &__select-account {
+      margin-top: 2rem;
+    }
+  }
+}
