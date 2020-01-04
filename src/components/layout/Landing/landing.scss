@@ -1,3 +1,29 @@
 .landing {
-    background: grey;
+    background-image: linear-gradient(#8a4bafe7, rgba(210, 162, 235, 0.143)), url(../../../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    margin: 2px;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 3.2rem;
+}
+
+.pt-10 {
+    padding-top: 6rem!important;
+}
+
+.navbar-nav .nav-item .register-btn {
+    border: 1px solid white;
+    border-radius: 35px;
+    padding: 5px 30px;
 }
