@@ -1,20 +1,41 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+}
 .landing {
-    background-image: linear-gradient(#8a4bafe7, rgba(210, 162, 235, 0.143)), url(../../../img/hero.jpg);
+    // background-image: linear-gradient(#362066, #362066cc), url(../../../img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.76)), url(../../../img/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
+
+
 .navbar-nav .nav-item .nav-link {
     color: white;
     margin: 2px;
-}
-.navbar {
-    position: fixed;
-    width: 100%;
+    text-align: center;
 }
 
-.navbar-brand {
+.navbar {
+    // position: fixed;
+    width: 100%;
+    height: 8%;
+}
+
+.navbar .navbar-nav {
+    border-bottom: 2px solid white;
+}
+
+.navbar .navbar-brand {
+    color: white;
     font-size: 3.2rem;
 }
 
@@ -22,8 +43,36 @@
     padding-top: 6rem!important;
 }
 
-.navbar-nav .nav-item .register-btn {
-    border: 1px solid white;
-    border-radius: 35px;
-    padding: 5px 30px;
+// .navbar-nav .nav-item .register-btn {
+//     border-radius: 35px;
+//     padding: 5px 30px;
+// }
+
+.hero-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 92%;
+}
+
+.header {
+    font-size: 7.5rem;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.btn {
+    padding: 10px 20px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.btn:first-child {
+    color: red;
+    opacity: .5;
 }

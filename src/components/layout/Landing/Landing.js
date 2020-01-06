@@ -11,9 +11,14 @@ const Landing = ({ isAuthenticated }) => {
 	return (
 		<section className='landing'>
 			<Navbar />
-			<div className="pt-10 container">
-				<h1>Landing page Contents</h1>
-			</div>
+			<section className="container hero-container">
+				<h1 className="header">A bank for good</h1>
+				<p>Join an ethical bank that exits to lend to <br/>charities and social enterprises</p>
+				<div>
+					<button class="btn btn-primary-outline" type="button">LOGIN</button>
+					<button class="btn btn-primary" type="button">START HERE</button>
+				</div>
+			</section>
 		</section>
 	);
 };
