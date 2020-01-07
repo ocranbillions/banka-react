@@ -76,3 +76,39 @@ p {
     color: red;
     opacity: .5;
 }
+
+
+
+
+// ================
+.section2-container {
+    // border: 1px solid red;
+    // margin-top: -100px;
+    // background: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.842)), url(../../../img/happy_clients.jpg);
+    background-size: cover;
+    background-position: center;
+    // background-color: #000;
+    // opacity: .5;
+    text-align: center;
+    color: white;
+}
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    div {
+        border: 1px solid white;
+        width: 24%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .content {
+        color: red;
+        align-self: center;
+        // display: flex;
+    }
+}
