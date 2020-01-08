@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
-import Navbar from '../../navbar/Navbar'
+import { Redirect, Link } from 'react-router-dom';
+import Navbar from '../navbar/Navbar'
 import './landing.scss';
 
 const Landing = ({ isAuthenticated }) => {
@@ -13,37 +13,65 @@ const Landing = ({ isAuthenticated }) => {
 			<section className='landing'>
 				<Navbar />
 				<section className="container hero-container">
-					<h1 className="header">A bank for good</h1>
-					<p>Join an ethical bank that exits to lend to <br/>charities and social enterprises</p>
-					<div>
-						<button class="btn btn-primary-outline" type="button">LOGIN</button>
-						<button class="btn btn-primary" type="button">START HERE</button>
+					<div className="header-container">
+						<h1 className="header">Fresh paint and bright smiles make it home. We make it  happen.</h1>
+						<p>Whether you’re a first-time home buyer or an empty nester, our team of home loan experts work hard to get you home fast.</p>
+						<div>
+							<button class="btn btn-primary mt-5" type="button">START HERE</button>
+						</div>
 					</div>
 				</section>
 			</section>
 			<section className="section2-container">
 				<div className="container">
-					<h2>The Proof is in the Pudding!</h2>
 					<div className="section2">
-						<div>
-							<h2>23000</h2>
-							<p>---</p>
-							<p>HAPPY CLIENTS</p>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/home-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">Apply for a Home Loan</h3>
+							</Link>
 						</div>
-						<div>
-							<h2>934</h2>
-							<p>---</p>
-							<p>BRANCHES AROUND THE WORLD</p>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/member-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">Become a Member</h3>
+							</Link>
 						</div>
-						<div>
-							<h2>1.4</h2>
-							<p>---</p>
-							<p>BILLION DOLLARS MANAGED</p>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/cc-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">Make a Payment</h3>
+							</Link>
 						</div>
-						<div>
-							<h2>60000</h2>
-							<p>---</p>
-							<p>CUPS OF COFFEE</p>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/onlineBanking-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">SignUp for Online Banking</h3>
+							</Link>
+						</div>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/phone-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">Contact Us</h3>
+							</Link>
+						</div>
+						<div class="box">
+							<Link to="#">
+								<div class="icon-wrapper">
+									<img src="./resources/img/team-icon.svg" alt="Home Icon"/>
+								</div>
+								<h3 class="fontMedium">Join The Team</h3>
+							</Link>
 						</div>
 					</div>
 				</div>
