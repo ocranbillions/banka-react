@@ -76,6 +76,24 @@ const Landing = ({ isAuthenticated }) => {
 					</div>
 				</div>
 			</section>
+			<section className="container sec-3-container">
+				<div className="col-1-of-2">
+					<img src="./resources/img/debitCard.jpg" alt="Debit card"/>
+				</div>
+				<div className="col-1-of-2">
+					<div className="content">
+						<span>The Solitary Difference</span>
+						<h3 className="pt-5 pb-5">As a Solarian, you’ll benefit from these great features:</h3>
+						<ul>
+							<li>Easy online lending and membership applications</li>
+							<li>Simple and secure online and mobile banking</li>
+							<li>Access to over 23k ATMs nationwide</li>
+							<li>Survey programs to ensure your voice is heard</li>
+						</ul>
+						<div><Link to="#">See Other Features </Link></div>
+					</div>
+				</div>
+			</section>
 		</Fragment>
 	);
 };
