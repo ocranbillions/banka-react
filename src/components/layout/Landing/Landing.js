@@ -90,10 +90,66 @@ const Landing = ({ isAuthenticated }) => {
 							<li>Access to over 23k ATMs nationwide</li>
 							<li>Survey programs to ensure your voice is heard</li>
 						</ul>
-						<div><Link to="#">See Other Features </Link></div>
+						<h4><Link to="#">See Other Features</Link></h4>
 					</div>
 				</div>
 			</section>
+			<section className="container section-4-container">
+				<div className="section-4-box section-4-left">
+					<img src="./resources/img/macbook-pic.jpg" alt="Pic"/>
+					<h3 className="pt-5 pb-3">Questions?</h3>
+					<p className="pb-3">Everything you need to know from mortgage loans to online banking. We’re here to help.</p>
+					<h4><Link to="#">Frequently Asked Questions</Link></h4>
+				</div>
+				<div className="section-4-box section-4-right">
+					<img src="./resources/img/cup-pic.jpg" alt="Pic"/>
+					<h3 className="pt-5 pb-3">Stay Informed</h3>
+					<p className="pb-3">For everything from home lending resources to what's happening around the Pacific Northwest.</p>
+					<h4 className="mb-5"><Link to="#">Visit Our Blog </Link></h4>
+				</div>
+			</section>
+			<footer>
+				<section className="container footer-top-section">
+					<div>
+						<h5>Features</h5>
+						<ul>
+							<li>Signup</li>
+							<li>Transfer and Payments</li>
+							<li>Savings and Goals</li>
+						</ul>
+					</div>
+					<div>
+						<h5>Company</h5>
+						<ul>
+							<li>The Banka! Life</li>
+							<li>FAQ</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+					<div className="apps-container">
+						<h5>Get BANKA!</h5>
+						<ul>
+							<li><img src="./resources/img/playstore.png" alt="Play store"/></li>
+							<li><img src="./resources/img/applestore.svg" alt="Apple Store"/></li>
+						</ul>
+					</div>
+					<div>
+						<h5>Social Media</h5>
+						<ul className="social-btn-container">
+							<li><Link to="#" class="fa fa-twitter"></Link></li>
+							<li><Link to="#" class="fa fa-facebook"></Link></li>
+							<li><Link to="#" class="fa fa-instagram"></Link></li>
+							{/* <li>Supported by</li> */}
+						</ul>
+					</div>
+				</section>
+				<section className="container">
+					<div className="footer-bottom-section">
+						<p>Terms & Conditions  |  Privacy Policy</p>
+						<p>© BANKA 2020</p>
+					</div>
+				</section>
+			</footer>
 		</Fragment>
 	);
 };
