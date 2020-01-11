@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light">
             <div className="container">
-                <Link className="navbar-brand" to="#">BANKA!</Link>
+                <Link className="navbar-brand" to="/">BANKA!</Link>
                 <button className="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
                     <span className="navbar-toggler-icon bg-white"></span>
                 </button>

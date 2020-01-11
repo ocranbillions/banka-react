@@ -17,7 +17,7 @@ const Landing = ({ isAuthenticated }) => {
 						<h1 className="header">Fresh paint and bright smiles make it home. We make it  happen.</h1>
 						<p>Whether you’re a first-time home buyer or an empty nester, our team of home loan experts work hard to get you home fast.</p>
 						<div>
-							<button class="btn btn-primary mt-5" type="button">START HERE</button>
+							<Link to="/register"><button class="btn btn-primary mt-5" type="button">START HERE</button></Link>
 						</div>
 					</div>
 				</section>
@@ -139,7 +139,6 @@ const Landing = ({ isAuthenticated }) => {
 							<li><Link to="#" class="fa fa-twitter"></Link></li>
 							<li><Link to="#" class="fa fa-facebook"></Link></li>
 							<li><Link to="#" class="fa fa-instagram"></Link></li>
-							{/* <li>Supported by</li> */}
 						</ul>
 					</div>
 				</section>
