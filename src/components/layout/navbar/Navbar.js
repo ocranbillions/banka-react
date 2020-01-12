@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light">
             <div className="container">
-                <Link className="navbar-brand" to="#">BANKA!</Link>
+                <Link className="navbar-brand" to="/">BANKA!</Link>
                 <button className="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
                     <span className="navbar-toggler-icon bg-white"></span>
                 </button>
@@ -23,10 +23,10 @@ const Navbar = () => {
                             <Link className="nav-link" to="#">About Us</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Login</Link>
+                            <Link className="nav-link" to="/signin">Login</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link register-btn" to="#">Register</Link>
+                            <Link className="nav-link register-btn" to="/register">Register</Link>
                         </li>
                     </ul>
                 </div>
