@@ -10,7 +10,7 @@ function Register() {
                 <Navbar />
                 <section className="container">
                     <div className="auth-box">
-                        <h1 className="auth-box__title">Register</h1>
+                        <h1 className="auth-box__title">Sign-In</h1>
                         <div className="auth-boxes-parent">
                             <div className="auth-box-left">
                             <div className="description">
@@ -45,22 +45,6 @@ function Register() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="First Name..." />
-                                        </div>
-                                    </div>
-                                    <div className="auth-input-group-container">
-                                        <div className="input-group mb-3">
-                                            <div className="input-group-prepend">
-                                                <span className="input-group-text">@</span>
-                                            </div>
-                                            <input className="form-control" type="text" placeholder="Last Name..." />
-                                        </div>
-                                    </div>
-                                    <div className="auth-input-group-container">
-                                        <div className="input-group mb-3">
-                                            <div className="input-group-prepend">
-                                                <span className="input-group-text">@</span>
-                                            </div>
                                             <input className="form-control" type="text" placeholder="Email" />
                                         </div>
                                     </div>
@@ -72,9 +56,9 @@ function Register() {
                                             <input className="form-control" type="text" placeholder="Password" />
                                         </div>
                                     </div>
-                                    <p className="hav-acct">Already have an account? <Link to="/signin">Sign-In</Link></p>
+                                    <p className="hav-acct">Don't have an account? <Link to="/register">Register</Link></p>
                                     <div className="btn-container">
-                                        <Link to="$"><button class="btn btn-primary auth-btn" type="button">GET STARTED</button></Link>
+                                        <Link to="$"><button class="btn btn-primary auth-btn" type="button">SIGN IN</button></Link>
                                     </div>
                                 </form>
                             </div>
