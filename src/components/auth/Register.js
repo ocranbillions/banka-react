@@ -74,7 +74,7 @@ function Register() {
                                     </div>
                                     <p className="hav-acct">Already have an account? <Link to="/signin">Sign-In</Link></p>
                                     <div className="btn-container">
-                                        <Link to="$"><button class="btn btn-primary auth-btn" type="button">GET STARTED</button></Link>
+                                        <Link to="/dashboard"><button class="btn btn-primary auth-btn" type="button">GET STARTED</button></Link>
                                     </div>
                                 </form>
                             </div>
