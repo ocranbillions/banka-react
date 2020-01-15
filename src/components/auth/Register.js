@@ -1,9 +1,28 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar/Navbar';
 import './auth.scss';
 
-function Register() {
+const Register = () => {
+    const [formData, setFormDAta] = useState({
+        firstName: '',
+        lastName: '',
+        email: 'sampleEmail@email.com',
+        password: ''
+    })
+
+    const { firstName, lastName, email, password } = formData;
+
+    const onChange = event => {
+        setFormDAta({...formData, [event.target.name]: event.target.value });
+        console.log(event.target.name, formData[event.target.name])
+    }
+
+    const onSubmit = event => {
+        event.preventDefault();
+        console.log(222, formData);
+    }
+
     return (
         <Fragment>
             <section className='full-img-bg'>
@@ -34,9 +53,9 @@ function Register() {
                             </div>
                             <div className="auth-box-right">
                                 <ul className="auth-social">
-                                    <li><Link to="#" class="fa fa-google"></Link></li>
-                                    <li><Link to="#" class="fa fa-facebook"></Link></li>
-                                    <li><Link to="#" class="fa fa-twitter"></Link></li>
+                                    <li><Link to="#" className="fa fa-google"></Link></li>
+                                    <li><Link to="#" className="fa fa-facebook"></Link></li>
+                                    <li><Link to="#" className="fa fa-twitter"></Link></li>
                                 </ul>
                                 <p className="auth-classical-text">or be classical</p>
                                 <form>
@@ -45,7 +64,7 @@ function Register() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="First Name..." />
+                                            <input className="form-control" type="text" placeholder="First Name..." name="firstName" value={firstName} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <div className="auth-input-group-container">
@@ -53,7 +72,7 @@ function Register() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="Last Name..." />
+                                            <input className="form-control" type="text" placeholder="Last Name..." name="lastName" value={lastName} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <div className="auth-input-group-container">
@@ -61,7 +80,7 @@ function Register() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="Email" />
+                                            <input className="form-control" type="email" placeholder="Email" name="email" value={email} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <div className="auth-input-group-container">
@@ -69,11 +88,12 @@ function Register() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="Password" />
+                                            <input className="form-control" type="password" placeholder="Password" name="password" value={password} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <p className="hav-acct">Already have an account? <Link to="/signin">Sign-In</Link></p>
                                     <div className="btn-container">
+                                        {/* <input className="btn btn-primary auth-btn" type="submit" value="GET STARTED"/> */}
                                         <Link to="/dashboard"><button class="btn btn-primary auth-btn" type="button">GET STARTED</button></Link>
                                     </div>
                                 </form>

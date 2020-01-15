@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import AuthNavbar from '../layout/navbar/AuthNavbar'
 import './dashboard.scss';
 
 
@@ -6,49 +8,60 @@ function Dashboard(props) {
     return (
         <Fragment>
             <div className="full-width">
-                <div className="container menu-container">
-                <div className="menu-item">
-                    <span>ICON</span>
-                    <p>Dashboard</p>
-                </div>
-                <div>
-                    <span>ICON</span>
-                    <p>Accounts</p>
-                </div>
-                <div>
-                    <span>ICON</span>
-                    <p>Create Account</p>
-                </div>
-                <div>
-                    <span>ICON</span>
-                    <p>Dashboard</p>
-                </div>
-                <div>
-                    <span>ICON</span>
-                    <p>Dashboard</p>
-                </div>
-
+                <AuthNavbar />
+                <div className="container menu-container mt-2 mb-2">
+                    <Link to="/dashboard" className="menu-item active-menu">
+                        {/* <span>ICON</span> */}
+                        <i class="icon ion-md-card"></i>
+                        <p className="item">Dashboard</p>
+                    </Link>
+                    <Link to="#" className="menu-item">
+                        {/* <span>ICON</span> */}
+                        <i class="icon ion-md-person"></i>
+                        <p className="item">Accounts</p>
+                    </Link>
+                    <Link to="#" className="menu-item">
+                        {/* <span>ICON</span> */}
+                        <i class="icon ion-md-camera"></i>
+                        <p className="item">Upload Image</p>
+                    </Link>
+                    <Link to="#" className="menu-item">
+                        {/* <span>ICON</span> */}
+                        <i class="icon ion-md-settings"></i>
+                        <p className="item">Password Reset</p>
+                    </Link>
                 </div>
             </div>
             <div className="container mt-4">
 
-                <h2 className="mb-4 ml-3">Welcome $User</h2>
+                <h2 className="mb-4 ml-3">Welcome, Samuel</h2>
                 <div className="dashboard-contents">
                     <div className="side-bar bg-white">
                         <div className="profile-img-container mt-3">
                             <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="profile pic" />
                         </div>
                         <h3>Samuel Ocran</h3>
-                        <div className="info">
+                        <div className="basicinfo">
                             <p className="email">Email: sammiestt@gmail.com</p>
-                            <p className="date-joined">Member Since: 3rd January 2020</p>
+                            <p className="date-joined">Date Joined: 3rd January 2020</p>
                         </div>
-                    
-                        <h3>Accounts Created: 2</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum sem. Sed rutrum consectetur nisl ac tincidunt.
+                        
+                        <div className="detailed-info">
+                            <h3 className="mt-5">Profile Info</h3>
+                            <p>Accounts Owned: 2</p>
+                            <p>Last Login: 12/23/2020</p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum sem. Sed rutrum consectetur nisl ac tincidunt.   
+                        </div>
                     </div>
                     <div className="main-content bg-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum sem. Sed rutrum consectetur nisl ac tincidunt.
+                        <div className="no-account-box">
+                            <p className="message">You currently do not have any accounts but hey! No worries, you can create one below.</p>
+                            <div className="open-account">
+                                <button class="btn btn-primary btn-lg" type="button">
+                                    <i class="fas fa-user"></i> Open New Accont
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
