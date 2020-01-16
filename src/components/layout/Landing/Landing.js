@@ -88,7 +88,7 @@ const Landing = ({ isAuthenticated }) => {
 				</div>
 				<div className="col-1-of-2">
 					<div className="content">
-						<span>The Solitary Difference</span>
+						<span>The Banka! Difference</span>
 						<h3 className="pt-5 pb-5">As a Solarian, you’ll benefit from these great features:</h3>
 						<ul>
 							<li>Easy online lending and membership applications</li>

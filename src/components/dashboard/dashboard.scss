@@ -7,7 +7,6 @@
         margin-bottom: 5px;
         padding-left: 5px;
         padding-right: 5px;
-        // color: #362066c9;
         color: grey;
 
         .item {
@@ -26,10 +25,6 @@
     .menu-item:hover{
         background: #F6F6F6;
     }
-
-    // .menu-item p {
-    //     border-bottom: 1px solid blue;
-    // }
 }
 
 .full-width {
@@ -66,20 +61,79 @@
         width: 65%;
     }
 
-    .open-account {
-        display: flex;
-        border: 1px solid #00448B;
-        width: 250px;
-        // height: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        padding: 40px;
-        border-radius: 10px;
-
-        .btn {
-            background-color: #00448B;
+    // No account yet
+    .no-account-box {
+        .message {
+            font-size: 2rem;
+            font-weight: 900px;
+            color: #00448B;
+        }
+        .open-account {
+            display: flex;
             border: 1px solid #00448B;
+            width: 250px;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            padding: 40px;
+            border-radius: 10px; 
+            // // box-shadow: .5rem .5rem rgba(0, 0, 0, 0.2);    
+            // box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    
+            .btn {
+                background-color: #00448B;
+                border: 1px solid #00448B;
+                margin-right: -5px;
+                // box-shadow: .5rem .5rem rgba(0, 0, 0, 0.2);    
+                box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+            }
+        }
+    }
+
+    // Accounts
+    .accounts-section{
+        display: flex;
+        flex-direction: column;
+
+        .new-acc-btn {
+            align-self: flex-end;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            border: none;
+            padding: 10px;
+            background: #00448B;
+            color: white;
+            border-radius: 30px;
+        }
+    }
+    .accounts {
+        display: flex;  
+        justify-content: space-between;
+
+
+        .account-card {
+            width: 27rem;
+            height: 13rem;
+            background: linear-gradient(rgb(153, 153, 160), rgb(255, 255, 255));
+            border-radius: 10px;
+            box-shadow: .5rem .5rem rgba(0, 0, 0, 0.2);  
+            padding: 10px;
+            font-weight: bold;
+            color: #00448B;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        
+        @media only screen and (max-width: 992px) {
+            flex-direction: column;
+
+            .account-card {
+                align-self: center;
+                margin-bottom: 15px;
+                width: 22rem;
+            }
         }
     }
 }
