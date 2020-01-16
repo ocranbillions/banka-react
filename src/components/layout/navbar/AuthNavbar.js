@@ -5,12 +5,12 @@ import './navbar.scss'
 const Navbar = () => {
 
     return (
-        <nav>
+        <nav className="auth-nav-color">
             <div className="navigation container">
                 <Link className="brand-logo" to="/">BANKA!</Link>
                 <div className="nav-links-container">
-                    <Link className="nav-link" to="/signin">Login</Link>
-                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link email" to="/dashboard">sammiestt@gmail.com</Link>
+                    <Link className="nav-link" to="/">Logout</Link>
                 </div>
             </div>
         </nav>

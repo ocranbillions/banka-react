@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar/Navbar';
 import './auth.scss';
 
-function Register() {
+function SignIn() {
     return (
         <Fragment>
             <section className='full-img-bg'>
@@ -34,9 +34,9 @@ function Register() {
                             </div>
                             <div className="auth-box-right">
                                 <ul className="auth-social">
-                                    <li><Link to="#" class="fa fa-google"></Link></li>
-                                    <li><Link to="#" class="fa fa-facebook"></Link></li>
-                                    <li><Link to="#" class="fa fa-twitter"></Link></li>
+                                    <li><Link to="#" className="fa fa-google"></Link></li>
+                                    <li><Link to="#" className="fa fa-facebook"></Link></li>
+                                    <li><Link to="#" className="fa fa-twitter"></Link></li>
                                 </ul>
                                 <p className="auth-classical-text">or be classical</p>
                                 <form>
@@ -58,7 +58,8 @@ function Register() {
                                     </div>
                                     <p className="hav-acct">Don't have an account? <Link to="/register">Register</Link></p>
                                     <div className="btn-container">
-                                        <Link to="$"><button class="btn btn-primary auth-btn" type="button">SIGN IN</button></Link>
+                                        {/* <input className="btn btn-primary auth-btn" type="submit" value="SIGN IN"/> */}
+                                        <Link to="/dashboard"><button class="btn btn-primary auth-btn" type="button">SIGN IN</button></Link>
                                     </div>
                                 </form>
                             </div>
@@ -70,4 +71,4 @@ function Register() {
     )
 }
 
-export default Register;
+export default SignIn;

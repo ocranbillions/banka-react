@@ -10,67 +10,73 @@ const Landing = ({ isAuthenticated }) => {
 
 	return (
 		<Fragment>
-			<section className='landing'>
+			{/* <section className='landing'> */}
+			<section className='full-img-bg'>
 				<Navbar />
 				<section className="container hero-container">
 					<div className="header-container">
 						<h1 className="header">Fresh paint and bright smiles make it home. We make it  happen.</h1>
 						<p>Whether you’re a first-time home buyer or an empty nester, our team of home loan experts work hard to get you home fast.</p>
 						<div>
-							<Link to="/register"><button class="btn btn-primary mt-5" type="button">START HERE</button></Link>
+							<Link to="/register"><button className="btn btn-primary mt-5" type="button">START HERE</button></Link>
 						</div>
 					</div>
 				</section>
 			</section>
 			<section className="section2-container">
 				<div className="container">
+					<div className="text-center mb-5">
+						<h2 className="font-weight-bold">Suggested Services</h2>
+						<p>See our to pick of services for you</p>
+					</div>
+
 					<div className="section2">
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/home-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">Apply for a Home Loan</h3>
+								<h3 className="fontMedium">Apply for a Loan</h3>
 							</Link>
 						</div>
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/member-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">Become a Member</h3>
+								<h3 className="fontMedium">Become a Member</h3>
 							</Link>
 						</div>
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/cc-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">Make a Payment</h3>
+								<h3 className="fontMedium">Make a Payment</h3>
 							</Link>
 						</div>
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/onlineBanking-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">SignUp for Online Banking</h3>
+								<h3 className="fontMedium">Online Banking</h3>
 							</Link>
 						</div>
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/phone-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">Contact Us</h3>
+								<h3 className="fontMedium">Contact Us</h3>
 							</Link>
 						</div>
-						<div class="box">
+						<div className="box">
 							<Link to="#">
-								<div class="icon-wrapper">
+								<div className="icon-wrapper">
 									<img src="./resources/img/team-icon.svg" alt="Home Icon"/>
 								</div>
-								<h3 class="fontMedium">Join The Team</h3>
+								<h3 className="fontMedium">Join The Team</h3>
 							</Link>
 						</div>
 					</div>
@@ -82,7 +88,7 @@ const Landing = ({ isAuthenticated }) => {
 				</div>
 				<div className="col-1-of-2">
 					<div className="content">
-						<span>The Solitary Difference</span>
+						<span>The Banka! Difference</span>
 						<h3 className="pt-5 pb-5">As a Solarian, you’ll benefit from these great features:</h3>
 						<ul>
 							<li>Easy online lending and membership applications</li>
@@ -136,9 +142,9 @@ const Landing = ({ isAuthenticated }) => {
 					<div>
 						<h5>Social Media</h5>
 						<ul className="social-btn-container">
-							<li><Link to="#" class="fa fa-twitter"></Link></li>
-							<li><Link to="#" class="fa fa-facebook"></Link></li>
-							<li><Link to="#" class="fa fa-instagram"></Link></li>
+							<li><Link to="#" className="fa fa-twitter"></Link></li>
+							<li><Link to="#" className="fa fa-facebook"></Link></li>
+							<li><Link to="#" className="fa fa-instagram"></Link></li>
 						</ul>
 					</div>
 				</section>

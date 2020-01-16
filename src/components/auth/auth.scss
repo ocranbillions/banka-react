@@ -1,25 +1,9 @@
-.full-img-bg {
-    // background-image: linear-gradient(#362066, #362066cc), url(../../img/hero3.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.76)), url(../../img/hero3.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-
-    @media only screen and (max-width: 770px) {
-        & {
-            height: 100%;
-            padding-bottom: 1px;
-        }
-    }
-}
-
 .auth-box {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
-    margin: 100px auto 100px auto;
-    padding: 40px 50px;
-    padding-bottom: 70px;
+    margin: 50px auto 0px auto;
+    padding: 15px 20px;
     width: 80%;
     @media only screen and (max-width: 990px) {
         width: 95%;
@@ -45,6 +29,9 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+            // .auth-box-left {
+            //     display: none;
+            // }
         }
     }
 
@@ -147,7 +134,6 @@
 
     .auth-box-left,
     .auth-box-right {
-        // border: 1px solid blue;
         width: 50%;
         padding: 0px 30px;
     }
