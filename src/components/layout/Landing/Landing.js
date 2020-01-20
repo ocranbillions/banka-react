@@ -84,7 +84,7 @@ const Landing = ({ isAuthenticated }) => {
 			</section>
 			<section className="container sec-3-container">
 				<div className="col-1-of-2">
-					<img src="./resources/img/debitCard.jpg" alt="Debit card"/>
+					<img src="./resources/img/piggy.svg" alt="Piggy Bank Icon"/>
 				</div>
 				<div className="col-1-of-2">
 					<div className="content">
@@ -102,13 +102,19 @@ const Landing = ({ isAuthenticated }) => {
 			</section>
 			<section className="container section-4-container">
 				<div className="section-4-box section-4-left">
-					<img src="./resources/img/macbook-pic.jpg" alt="Pic"/>
+					<div className="svg-container">
+						<img src="./resources/img/customer_care.svg" alt="Pic"/>
+					</div>
+					{/* <img src="./resources/img/customer_care.svg" alt="Pic"/> */}
 					<h3 className="pt-5 pb-3">Questions?</h3>
 					<p className="pb-3">Everything you need to know from mortgage loans to online banking. We’re here to help.</p>
 					<h4><Link to="#">Frequently Asked Questions</Link></h4>
 				</div>
 				<div className="section-4-box section-4-right">
-					<img src="./resources/img/cup-pic.jpg" alt="Pic"/>
+					<div className="svg-container">
+						<img src="./resources/img/update.svg" alt="Pic"/>
+					</div>
+					{/* <img src="./resources/img/update.svg" alt="Pic"/> */}
 					<h3 className="pt-5 pb-3">Stay Informed</h3>
 					<p className="pb-3">For everything from home lending resources to what's happening around the Pacific Northwest.</p>
 					<h4 className="mb-5"><Link to="#">Visit Our Blog </Link></h4>

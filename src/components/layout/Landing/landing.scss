@@ -171,10 +171,19 @@
     .section-4-box {
         width: 48%;
 
+        .svg-container {
+            max-width: 530px;
+            max-height: 330px;
+
+            width: 530px;
+            height: 330px;
+        }
+
         img {
             width: 100%;
             border-radius: 8px;
-            height: auto;
+            // height: auto;
+            height: 100%;
         }
 
         h3 {
