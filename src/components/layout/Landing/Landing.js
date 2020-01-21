@@ -15,7 +15,7 @@ const Landing = ({ isAuthenticated }) => {
 				<Navbar />
 				<section className="container hero-container">
 					<div className="header-container">
-						<h1 className="header">Fresh paint and bright smiles make it home. We make it  happen.</h1>
+						<h1 className="header">Let's help you get a home today. We are more than a bank!</h1>
 						<p>Whether you’re a first-time home buyer or an empty nester, our team of home loan experts work hard to get you home fast.</p>
 						<div>
 							<Link to="/register"><button className="btn btn-primary mt-5" type="button">START HERE</button></Link>
@@ -84,12 +84,13 @@ const Landing = ({ isAuthenticated }) => {
 			</section>
 			<section className="container sec-3-container">
 				<div className="col-1-of-2">
-					<img src="./resources/img/piggy.svg" alt="Piggy Bank Icon"/>
+					{/* <img src="./resources/img/piggy.svg" alt="Piggy Bank Icon"/> */}
+					<img src="./resources/img/debitCard.jpg" alt="Piggy Bank Icon"/>
 				</div>
 				<div className="col-1-of-2">
 					<div className="content">
 						<span>The Banka! Difference</span>
-						<h3 className="pt-5 pb-5">As a Solarian, you’ll benefit from these great features:</h3>
+						<h3 className="pt-5 pb-5">Join now and benefit from these great features:</h3>
 						<ul>
 							<li>Easy online lending and membership applications</li>
 							<li>Simple and secure online and mobile banking</li>
@@ -102,19 +103,19 @@ const Landing = ({ isAuthenticated }) => {
 			</section>
 			<section className="container section-4-container">
 				<div className="section-4-box section-4-left">
-					<div className="svg-container">
+					{/* <div className="svg-container">
 						<img src="./resources/img/customer_care.svg" alt="Pic"/>
-					</div>
-					{/* <img src="./resources/img/customer_care.svg" alt="Pic"/> */}
+					</div> */}
+					<img src="./resources/img/macbook-pic.jpg" alt="Pic"/>
 					<h3 className="pt-5 pb-3">Questions?</h3>
 					<p className="pb-3">Everything you need to know from mortgage loans to online banking. We’re here to help.</p>
 					<h4><Link to="#">Frequently Asked Questions</Link></h4>
 				</div>
 				<div className="section-4-box section-4-right">
-					<div className="svg-container">
+					{/* <div className="svg-container">
 						<img src="./resources/img/update.svg" alt="Pic"/>
-					</div>
-					{/* <img src="./resources/img/update.svg" alt="Pic"/> */}
+					</div> */}
+					<img src="./resources/img/cup-pic.jpg" alt="Pic"/>
 					<h3 className="pt-5 pb-3">Stay Informed</h3>
 					<p className="pb-3">For everything from home lending resources to what's happening around the Pacific Northwest.</p>
 					<h4 className="mb-5"><Link to="#">Visit Our Blog </Link></h4>
