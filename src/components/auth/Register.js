@@ -18,10 +18,10 @@ const Register = () => {
         console.log(event.target.name, formData[event.target.name])
     }
 
-    const onSubmit = event => {
-        event.preventDefault();
-        console.log(222, formData);
-    }
+    // const onSubmit = event => {
+    //     event.preventDefault();
+    //     console.log(222, formData);
+    // }
 
     return (
         <Fragment>
