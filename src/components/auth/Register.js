@@ -1,13 +1,17 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Navbar from '../layout/navbar/Navbar';
+import Alert from '../layout/alert/Alert';
+import setAlert from '../../redux/actions/alert.action';
 import './auth.scss';
 
-const Register = () => {
+const Register = ({ setAlert }) => {
     const [formData, setFormDAta] = useState({
         firstName: '',
         lastName: '',
-        email: 'sampleEmail@email.com',
+        email: '',
         password: ''
     })
 
@@ -18,10 +22,11 @@ const Register = () => {
         console.log(event.target.name, formData[event.target.name])
     }
 
-    // const onSubmit = event => {
-    //     event.preventDefault();
-    //     console.log(222, formData);
-    // }
+    const onSubmit = event => {
+        event.preventDefault();
+        console.log(222, formData);
+        setAlert('Testing Alert...', 'danger');
+    }
 
     return (
         <Fragment>
@@ -58,7 +63,7 @@ const Register = () => {
                                     <li><Link to="#" className="fa fa-twitter"></Link></li>
                                 </ul>
                                 <p className="auth-classical-text">or be classical</p>
-                                <form>
+                                <form onSubmit={e => onSubmit(e)}>
                                     <div className="auth-input-group-container">
                                         <div className="input-group mb-3">
                                             <div className="input-group-prepend">
@@ -93,9 +98,9 @@ const Register = () => {
                                     </div>
                                     <p className="hav-acct">Already have an account? <Link to="/signin">Sign-In</Link></p>
                                     <div className="btn-container">
-                                        {/* <input className="btn btn-primary auth-btn" type="submit" value="GET STARTED"/> */}
-                                        <Link to="/dashboard"><button class="btn btn-primary auth-btn" type="button">GET STARTED</button></Link>
+                                       <input className="btn btn-primary auth-btn" type="submit" value="GET STARTED"></input>
                                     </div>
+                                    <Alert />
                                 </form>
                             </div>
                         </div>
@@ -106,4 +111,12 @@ const Register = () => {
     )
 }
 
-export default Register;
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired,
+};
+  
+// const mapStateToProps = state => ({
+//     submitting: state.authReducer.submitting,
+// });
+
+export default connect(null, { setAlert })(Register);

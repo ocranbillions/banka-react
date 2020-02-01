@@ -157,7 +157,7 @@ const Landing = ({ isAuthenticated }) => {
 				</section>
 				<section className="container">
 					<div className="footer-bottom-section">
-						<p>Terms & Conditions  |  Privacy Policy</p>
+						<p>Terms &amp; Conditions  |  Privacy Policy</p>
 						<p>© BANKA 2020</p>
 					</div>
 				</section>

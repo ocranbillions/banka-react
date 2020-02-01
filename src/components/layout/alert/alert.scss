@@ -1,0 +1,27 @@
+/* ====== Alerts ====== */
+
+:root {
+    --primary-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+  }
+  
+.alert {
+    margin-top: 1rem;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.alert-danger {
+    background: none;
+    border: none;
+    color: red;
+}
+
+.alert-success {
+    background: #28a745;
+    color: #fff;
+}
