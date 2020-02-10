@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Navbar from '../layout/navbar/Navbar';
 import Alert from '../layout/alert/Alert';
-import setAlert from '../../redux/actions/alert.action';
+import { register } from '../../redux/actions/auth.action';
 import './auth.scss';
 
-const Register = ({ setAlert }) => {
+const Register = ({ register, loading, isAuthenticated }) => {
     const [formData, setFormDAta] = useState({
         firstName: '',
         lastName: '',
@@ -19,13 +19,15 @@ const Register = ({ setAlert }) => {
 
     const onChange = event => {
         setFormDAta({...formData, [event.target.name]: event.target.value });
-        console.log(event.target.name, formData[event.target.name])
     }
 
     const onSubmit = event => {
         event.preventDefault();
-        console.log(222, formData);
-        setAlert('Testing Alert...', 'danger');
+        register(formData);
+    }
+
+    if (isAuthenticated) {
+        return <Redirect to='/dashboard' />;
     }
 
     return (
@@ -98,7 +100,7 @@ const Register = ({ setAlert }) => {
                                     </div>
                                     <p className="hav-acct">Already have an account? <Link to="/signin">Sign-In</Link></p>
                                     <div className="btn-container">
-                                       <input className="btn btn-primary auth-btn" type="submit" value="GET STARTED"></input>
+                                       <input className="btn btn-primary auth-btn" type="submit" value={loading ? " PLEASE WAIT " : "GET STARTED"}></input>
                                     </div>
                                     <Alert />
                                 </form>
@@ -112,11 +114,14 @@ const Register = ({ setAlert }) => {
 }
 
 Register.propTypes = {
-    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired,
+    loading: PropTypes.bool.isRequired,
 };
   
-// const mapStateToProps = state => ({
-//     submitting: state.authReducer.submitting,
-// });
+const mapStateToProps = state => ({
+    isAuthenticated: state.authReducer.isAuthenticated,
+    loading: state.authReducer.loading,
+});
 
-export default connect(null, { setAlert })(Register);
+export default connect(mapStateToProps, { register })(Register);

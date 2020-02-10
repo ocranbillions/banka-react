@@ -11,7 +11,7 @@ function Dashboard(props) {
                 <AuthNavbar />
                 <div className="container menu-container mt-2 mb-2">
                     <Link to="/dashboard" className="menu-item active-menu">
-                        <i class="icon ion-md-card"></i>
+                        <i className="icon ion-md-card"></i>
                         <p className="item">Dashboard</p>
                     </Link>
                     <Link to="#" className="menu-item">
@@ -60,9 +60,9 @@ function Dashboard(props) {
                         </div> */}
 
                         <div className="accounts-section">
-                            <button class="new-acc-btn">
+                            {/* <button class="new-acc-btn">
                                 + New Account
-                            </button>
+                            </button> */}
 
                             <div className="accounts">
                                 <div className="account-card">
