@@ -15,15 +15,15 @@ function Dashboard(props) {
                         <p className="item">Dashboard</p>
                     </Link>
                     <Link to="#" className="menu-item">
-                        <i class="icon ion-md-person"></i>
+                        <i className="icon ion-md-person"></i>
                         <p className="item">Accounts</p>
                     </Link>
                     <Link to="#" className="menu-item">
-                        <i class="icon ion-md-camera"></i>
+                        <i className="icon ion-md-camera"></i>
                         <p className="item">Upload Image</p>
                     </Link>
                     <Link to="#" className="menu-item">
-                        <i class="icon ion-md-settings"></i>
+                        <i className="icon ion-md-settings"></i>
                         <p className="item">Password Reset</p>
                     </Link>
                 </div>
@@ -53,14 +53,14 @@ function Dashboard(props) {
                         {/* <div className="no-account-box">
                             <p className="message">You currently do not have any accounts but hey! No worries, you can create one below.</p>
                             <div className="open-account">
-                                <button class="btn btn-primary btn-lg" type="button">
-                                    <i class="icon ion-md-create mr-2"></i> Open New Accont
+                                <button className="btn btn-primary btn-lg" type="button">
+                                    <i className="icon ion-md-create mr-2"></i> Open New Accont
                                 </button>
                             </div>
                         </div> */}
 
                         <div className="accounts-section">
-                            {/* <button class="new-acc-btn">
+                            {/* <button className="new-acc-btn">
                                 + New Account
                             </button> */}
 

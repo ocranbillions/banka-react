@@ -1,8 +1,11 @@
 import React  from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../../redux/actions/auth.action';
 import './navbar.scss'
 
-const Navbar = () => {
+const AuthNav = ({ logout }) => {
 
     return (
         <nav className="auth-nav-color">
@@ -10,11 +13,16 @@ const Navbar = () => {
                 <Link className="brand-logo" to="/">BANKA!</Link>
                 <div className="nav-links-container">
                     <Link className="nav-link email" to="/dashboard">sammiestt@gmail.com</Link>
-                    <Link className="nav-link" to="/">Logout</Link>
+                    <Link className="nav-link" to="/signin" onClick={logout}>Logout</Link>
                 </div>
             </div>
         </nav>
     );
 };
 
-export default Navbar;
+
+AuthNav.propTypes = {
+    logout: PropTypes.func.isRequired,
+};
+  
+export default connect(null, { logout })(AuthNav);

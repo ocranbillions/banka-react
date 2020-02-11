@@ -5,3 +5,4 @@ export const REGISTER_FAIL = 'REGISTER_FAIL';
 export const AUTH_LOADING = 'AUTH_LOADING';
 export const USER_LOADED = 'USER_LOADED';
 export const AUTH_ERROR = 'AUTH_ERROR';
+export const LOGOUT = 'LOGOUT';
