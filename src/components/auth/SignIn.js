@@ -1,9 +1,33 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Alert from '../layout/alert/Alert';
+import { signIn } from '../../redux/actions/auth.action';
 import Navbar from '../layout/navbar/Navbar';
 import './auth.scss';
 
-function SignIn() {
+const SignIn = ({ signIn, loading, isAuthenticated }) => {
+    const [loginData, setLoginData] = useState({
+        email: '',
+        password: ''
+    })
+
+    const { email, password } = loginData;
+
+    const onChange = event => {
+        setLoginData({...loginData, [event.target.name]: event.target.value });
+    }
+
+    const onSubmit = event => {
+        event.preventDefault();
+        signIn(loginData);
+    }
+
+    if (isAuthenticated) {
+        return <Redirect to='/dashboard' />;
+    }
+
     return (
         <Fragment>
             <section className='full-img-bg'>
@@ -39,13 +63,13 @@ function SignIn() {
                                     <li><Link to="#" className="fa fa-twitter"></Link></li>
                                 </ul>
                                 <p className="auth-classical-text">or be classical</p>
-                                <form>
+                                <form onSubmit={e => onSubmit(e)}>
                                     <div className="auth-input-group-container">
                                         <div className="input-group mb-3">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="Email" />
+                                            <input className="form-control" type="email" name="email" value={email} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <div className="auth-input-group-container">
@@ -53,14 +77,14 @@ function SignIn() {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">@</span>
                                             </div>
-                                            <input className="form-control" type="text" placeholder="Password" />
+                                            <input className="form-control" type="password" name="password" value={password} onChange={e => onChange(e)}/>
                                         </div>
                                     </div>
                                     <p className="hav-acct">Don't have an account? <Link to="/register">Register</Link></p>
                                     <div className="btn-container">
-                                        {/* <input className="btn btn-primary auth-btn" type="submit" value="SIGN IN"/> */}
-                                        <Link to="/dashboard"><button class="btn btn-primary auth-btn" type="button">SIGN IN</button></Link>
+                                        <input className="btn btn-primary auth-btn" type="submit" value={loading ? " PLEASE WAIT " : "SIGN IN"}></input>
                                     </div>
+                                    <Alert />
                                 </form>
                             </div>
                         </div>
@@ -71,4 +95,16 @@ function SignIn() {
     )
 }
 
-export default SignIn;
+
+SignIn.propTypes = {
+    signIn: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired,
+    loading: PropTypes.bool.isRequired,
+};
+  
+const mapStateToProps = state => ({
+    isAuthenticated: state.authReducer.isAuthenticated,
+    loading: state.authReducer.loading,
+});
+
+export default connect(mapStateToProps, { signIn })(SignIn);

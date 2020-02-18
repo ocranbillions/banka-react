@@ -1,14 +1,21 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import AuthNavbar from '../layout/navbar/AuthNavbar'
 import './dashboard.scss';
 
 
-function Dashboard(props) {
+const Dashboard = ({ user }) => {
+
+    // useEffect(() => {
+    //     getUserBankAccounts();
+    // }, [getUserBankAccounts]);
+
     return (
         <Fragment>
             <div className="full-width">
-                <AuthNavbar />
+                <AuthNavbar userEmail={user.email}/>
                 <div className="container menu-container mt-2 mb-2">
                     <Link to="/dashboard" className="menu-item active-menu">
                         <i className="icon ion-md-card"></i>
@@ -30,15 +37,15 @@ function Dashboard(props) {
             </div>
             <div className="container mt-4">
 
-                <h2 className="mb-4 ml-3">Welcome, Samuel</h2>
+                <h2 className="mb-4 ml-3">Welcome, {user.firstName}</h2>
                 <div className="dashboard-contents">
                     <div className="side-bar bg-white">
                         <div className="profile-img-container mt-3">
                             <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="profile pic" />
                         </div>
-                        <h3>Samuel Ocran</h3>
+                        <h3>{`${user.firstName} ${user.lastName}`}</h3>
                         <div className="basicinfo">
-                            <p className="email">Email: sammiestt@gmail.com</p>
+                            <p className="email">Email: {user.email}</p>
                             <p className="date-joined">Date Joined: 3rd January 2020</p>
                         </div>
                         
@@ -84,6 +91,13 @@ function Dashboard(props) {
     )
 }
 
+Dashboard.propTypes = {
+    user: PropTypes.object.isRequired,
+};
+  
+const mapStateToProps = state => ({
+    user: state.authReducer.user,
+});
 
-export default Dashboard
+export default connect(mapStateToProps, null)(Dashboard);
 
