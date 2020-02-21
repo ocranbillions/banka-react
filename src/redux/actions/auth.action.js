@@ -10,8 +10,11 @@ import {
   USER_LOADED,
   AUTH_LOADING,
   AUTH_ERROR,
-  LOGOUT
+  LOGOUT,
+  CLEAR_ACCOUNTS
 } from './types';
+
+import { fetchUserAccounts } from './accounts.action';
 
 
 
@@ -29,12 +32,12 @@ export const loadUser = () => async dispatch => {
             payload: user,
         });
 
+        dispatch(fetchUserAccounts(user.id));
+
     } catch (error) {
         const { message } = error;
         dispatch(setAlert(message, 'danger'));
-        dispatch({
-            type: AUTH_ERROR
-        });
+        dispatch({ type: AUTH_ERROR });
     }
 };
 
@@ -103,4 +106,5 @@ export const signIn = (user) => async dispatch => {
 // Logout
 export const logout = () => dispatch => {
     dispatch({ type: LOGOUT });
+    dispatch({ type: CLEAR_ACCOUNTS });
 };

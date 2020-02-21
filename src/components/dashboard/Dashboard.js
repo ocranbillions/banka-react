@@ -1,21 +1,18 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import AuthNavbar from '../layout/navbar/AuthNavbar'
+import AuthNavbar from '../layout/navbar/AuthNavbar';
+import Account from './Account';
 import './dashboard.scss';
 
 
-const Dashboard = ({ user }) => {
-
-    // useEffect(() => {
-    //     getUserBankAccounts();
-    // }, [getUserBankAccounts]);
+const Dashboard = ({ user, fetching_accounts, accounts }) => {
 
     return (
         <Fragment>
             <div className="full-width">
-                <AuthNavbar userEmail={user.email}/>
+                <AuthNavbar user={user}/>
                 <div className="container menu-container mt-2 mb-2">
                     <Link to="/dashboard" className="menu-item active-menu">
                         <i className="icon ion-md-card"></i>
@@ -57,14 +54,6 @@ const Dashboard = ({ user }) => {
                         </div>
                     </div>
                     <div className="main-content bg-white">
-                        {/* <div className="no-account-box">
-                            <p className="message">You currently do not have any accounts but hey! No worries, you can create one below.</p>
-                            <div className="open-account">
-                                <button className="btn btn-primary btn-lg" type="button">
-                                    <i className="icon ion-md-create mr-2"></i> Open New Accont
-                                </button>
-                            </div>
-                        </div> */}
 
                         <div className="accounts-section">
                             {/* <button className="new-acc-btn">
@@ -72,16 +61,20 @@ const Dashboard = ({ user }) => {
                             </button> */}
 
                             <div className="accounts">
-                                <div className="account-card">
-                                    <p>Type: Savings</p>
-                                    <p>Status: active</p>
-                                    <p>Balance: N24,444.00</p>
-                                </div>
-                                <div className="account-card">
-                                    <p>Type: Savings</p>
-                                    <p>Status: active</p>
-                                    <p>Balance: N24,444.00</p>
-                                </div>
+                                {
+                                    fetching_accounts ? <div>Fetching accounts...</div> :
+
+                                    (accounts.length > 0) ? accounts.map(account => (<Account key={account.id} account={account} />))
+                                    :   
+                                    <div className="no-account-box">
+                                        <p className="message">You currently do not have any account.</p>
+                                        <div className="open-account">
+                                            <button className="btn btn-primary btn-lg" type="button">
+                                                <i className="icon ion-md-create mr-2"></i> New Account
+                                            </button>
+                                        </div>
+                                    </div> 
+                                }
                             </div>
                         </div>
                     </div>
@@ -93,11 +86,15 @@ const Dashboard = ({ user }) => {
 
 Dashboard.propTypes = {
     user: PropTypes.object.isRequired,
+    accounts: PropTypes.array.isRequired,
+    fetching_accounts: PropTypes.bool.isRequired,
 };
   
 const mapStateToProps = state => ({
     user: state.authReducer.user,
+    accounts: state.accountReducer.accounts,
+    fetching_accounts: state.accountReducer.fetching_accounts,
 });
 
-export default connect(mapStateToProps, null)(Dashboard);
+export default connect(mapStateToProps, null )(Dashboard);
 
