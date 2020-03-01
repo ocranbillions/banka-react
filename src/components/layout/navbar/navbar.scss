@@ -1,6 +1,7 @@
 .navigation {
     display: flex;
     justify-content: space-between;
+    // margin-bottom: 6rem;
     padding-top: 5px;
     padding-bottom: 5px;;
 
@@ -30,10 +31,22 @@
     }
 
     @media only screen and (max-width: 767px) {
+        // & {
+        //     margin-bottom: 2.5rem;
+        // }
         .nav-link.email {
             display: none;
         }
     }
+
+    // @media only screen and (max-width: 500px) {
+    //     & {
+    //         margin-bottom: 6rem;
+    //     }
+    //     .nav-link.email {
+    //         display: none;
+    //     }
+    // }
 }
 
 .auth-nav-color {

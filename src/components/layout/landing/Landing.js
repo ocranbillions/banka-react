@@ -15,7 +15,7 @@ const Landing = ({ isAuthenticated }) => {
 				<Navbar />
 				<section className="container hero-container">
 					<div className="header-container">
-						<h1 className="header">Let's help you get a home today. We are more than a bank!</h1>
+						<h1 className="header">Let's help you get a home today. <br/>We are more than a bank!</h1>
 						<p>Whether you’re a first-time home buyer or an empty nester, our team of home loan experts work hard to get you home fast.</p>
 						<div>
 							<Link to="/register"><button className="btn btn-primary mt-5" type="button">START HERE</button></Link>

@@ -1,2 +1,2 @@
 # banka-react-frontend
-https://banka-fe.herokuapp.com/
+https://bankafe.herokuapp.com/
